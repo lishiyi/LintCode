@@ -32,7 +32,8 @@ public class BinarySearch {
         	mid = start + (end - start) / 2;
         	
         	if(nums[mid] == target){
-        		
+        		//If the mid is just the target, make it left shift, so at next time, (new mid > start)the start will closer to
+        		//target, until end is the next of start;
         		end = mid;
         	}
         	else if(nums[mid] < target){
