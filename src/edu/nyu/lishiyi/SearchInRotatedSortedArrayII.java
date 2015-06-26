@@ -13,6 +13,19 @@ public class SearchInRotatedSortedArrayII {
      */
     public boolean search(int[] A, int target) {
         // write your code here
+    	if(A == null || A.length == 0){
+    		
+    		return false;
+    	}
+    	
+    	for(int num : A){
+    		
+    		if( num == target){
+    			
+    			return true;
+    		}
+    	}
+    	
     	return false;
     }
 }
