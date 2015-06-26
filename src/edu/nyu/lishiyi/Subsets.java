@@ -1,6 +1,7 @@
 package edu.nyu.lishiyi;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Subsets
@@ -34,6 +35,8 @@ public class Subsets {
      */
     public ArrayList<ArrayList<Integer>> subsets(ArrayList<Integer> S) {
         // write your code here
+    	
+    	ArrayList<Integer> path = new ArrayList<Integer>();
     	
     	return null;
     }
