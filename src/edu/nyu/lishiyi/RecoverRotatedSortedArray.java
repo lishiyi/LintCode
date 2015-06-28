@@ -42,7 +42,7 @@ public class RecoverRotatedSortedArray {
 
     	reverse(nums, 0, i);
     	reverse(nums, i + 1, nums.size() - 1);
-    	reverse(nums);
+    	reverse(nums, 0, nums.size() - 1);
 
     }
 
