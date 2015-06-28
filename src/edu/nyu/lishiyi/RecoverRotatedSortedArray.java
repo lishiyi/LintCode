@@ -40,19 +40,19 @@ public class RecoverRotatedSortedArray {
     		}
     	}
 
-    	reverse(nums.subList(0, i + 1));
-    	reverse(nums.subList(i + 1, nums.size()));
+    	reverse(nums, 0, i);
+    	reverse(nums, i + 1, nums.size() - 1);
     	reverse(nums);
 
     }
 
-    private void reverse(List<Integer> A){
+    private void reverse(ArrayList<Integer> A, int start, int end){
 
-    	for(int start = 0, end = A.size() - 1; start < end; start++, end--){
+    	for(int i = start, j = end; i < j; i++, j--){
 
-    		int temp = A.get(start);
-    		A.set(start, A.get(end));
-    		A.set(end, temp);
+    		int temp = A.get(i);
+    		A.set(i, A.get(j));
+    		A.set(j, temp);
     	}
     }
 }
