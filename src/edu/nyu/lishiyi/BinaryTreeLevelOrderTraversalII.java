@@ -65,7 +65,7 @@ public class Solution {
         	result.add(level);
         }
 
-        Collection.reverse(result);
+        Collections.reverse(result);
         return result;
     }
 }
