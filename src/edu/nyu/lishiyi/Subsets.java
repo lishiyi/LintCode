@@ -1,12 +1,7 @@
-package edu.nyu.lishiyi;
+Subsets
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
-/**
- * Subsets
- * @author Administrator
- * Given a set of distinct integers, return all possible subsets.
+22% Accepted
+Given a set of distinct integers, return all possible subsets.
 
 Have you met this question in a real interview? Yes
 Example
@@ -26,24 +21,36 @@ Note
 Elements in a subset must be in non-descending order.
 
 The solution set must not contain duplicate subsets.
- */
 
-public class Subsets {
+class Solution {
     /**
      * @param S: A set of numbers.
      * @return: A list of lists. All valid subsets.
      */
     public ArrayList<ArrayList<Integer>> subsets(ArrayList<Integer> S) {
         // write your code here
-    	
-    	ArrayList<Integer> path = new ArrayList<Integer>();
-    	
-    	return null;
+        //1. create a result array for all cases;
+        ArrayList<ArrayList<Integer>> result = new ArrayList();
+        //2. Sort the arraylist for <Set> which can not duplicate.
+        Collections.sort(S);
+        //3. create a list for one case;
+        ArrayList<Integer> list = new ArrayList();
+        helper(result, list, S, 0);
+        return result;
     }
-    
-    
-    private void sebsetHelper(ArrayList<Integer> path, int[] num, int pos){
-    	
-    	
+
+    private void helper(ArrayList<ArrayList<Integer>> result, ArrayList<Integer> list,
+    	ArrayList<Integer> S, int pos){
+    	//4. Add the list to the result.(at the 1st time, this is null-set)
+    	result.add(new ArrayList(list));
+    	//5. For the remaining numbers, from pos to end
+    	for(int i = pos; i < S.size(); i++){
+    		//6. Add the first num to the list
+    		list.add(S.get(i));
+    		//7. Go on for the remaining.
+    		helper(result, list, S, i + 1);
+    		//8. backtrack(DFS)
+    		list.remove(list.size() - 1);
+    	}
     }
 }
