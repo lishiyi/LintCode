@@ -60,6 +60,9 @@ public class Solution {
     	//6. Iterate from current position to the end.
     	for(int i = pos; i < num.length; i++){
     		//7. If dupilicate num(and not the first time we choose), countinue for next
+    		// For example [1(1),1(2),1(3),2]: without this line, it will be:
+    		//[1(1),2],[1(2),2],[1(3),2], they are all the same.
+    		//So we only use the first one. That is [1(1),2]
     		if(i != pos && num[i] == num[i - 1]){
 
     			continue;
