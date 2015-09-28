@@ -17,25 +17,11 @@ public class Solution {
 	 */
 	public int singleNumber(int[] A) {
 
-		Set<Integer> hashSet = new HashSet<Integer>();
-
+		int result = 0;
 		for(int num : A){
 
-			if(hashSet.contains(num)){
-
-				hashSet.remove(num);
-			}
-			else{
-
-				hashSet.add(num);
-			}
+			result = result ^ num;
 		}
-
-		for(int num: hashSet){
-
-			return num;
-		}
-
-		return 0;
+		return result;
 	}
 }
