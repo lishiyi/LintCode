@@ -66,7 +66,7 @@ public class BinaryTreeMaximumPathSum {
      */
     public int maxPathSum(TreeNode root) {
         // write your code here
-    	ResultType result = new ResultType(root);
+    	ResultType result = helper(root);
     	return result.maxPath;
     }
 }
