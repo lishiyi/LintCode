@@ -29,7 +29,7 @@ class Solution {
         long product = fastPower(a, b, n / 2);
         product = product * product % b;
         if(n % 2 == 1){
-        	product *= a % b;
+        	product = (product * a) % b;
         }
         return (int) product;
     }

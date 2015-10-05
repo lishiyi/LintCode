@@ -25,7 +25,12 @@ public class Solution {
         // write your code here
         int len = A.length;
         int[][][] f = new int[len + 1][k + 1][target + 1];
-         
+        for(int i = 0; i < len + 1; i++){
+
+        	f[i][0][0] = 1;
+        }
+
+        for(int i = 0; i < len) 
     }
 }
 

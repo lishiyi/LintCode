@@ -36,7 +36,11 @@ public class Solution {
         while(head != null){
 
         	int headVal = dummy.next.val;
-        	ListNode current = dummy;
+        	//ListNode current = dummy;
+        	if(head.val < headVal){
+
+        		
+        	}
 
         }
     }
